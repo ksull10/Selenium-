@@ -166,3 +166,18 @@ Example:
 ```
 
 [Follow me](/wdio/src/inventory-ignore-regions.spec.ts#L12-L18) to see complete working example
+
+### Testing multiple browsers in one build
+
+Multiple browsers can be specified in [wdio config file](/wdio/wdio.conf.ts) `capabilities` section. Visual Testing will then keep all the snapshots from different browsers in the same build then.
+
+Example:
+
+```ts
+    capabilities: [{
+        browserName: 'chrome'
+    }, {
+        browserName: 'firefox',
+        browserVersion: 'latest'
+    }],
+```
